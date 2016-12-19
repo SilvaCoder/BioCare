@@ -12,7 +12,7 @@ servidor.use(bodyParser.json());
 servidor.use(express.static('public')); // PASTA PARA RESOURCES
 servidor.use(cors());
 servidor.set('views', 'views');
-servidor.engine('html', require('ejs').renderFile);
+//servidor.engine('html', require('ejs').renderFile);
 
 const dfAPIKey = "8a89ec5da25d606fdae60af216ca4563d502ff9010014f593f8acd7554aa94df";
 const localDfAPIKey = "d7475874c5665a4cd44be1cba95b715945a0406c7006ec2b1b797f191ce7528e";
