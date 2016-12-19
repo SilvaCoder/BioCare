@@ -1,0 +1,16 @@
+{
+  "name": "inoveitwebserver",
+  "version": "1.0.0",
+  "description": "InoveIt Soutions Web Server for BioCare",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "inoveit",
+    "solutions",
+    "biocare"
+  ],
+  "author": "Marco Aurelio Silva",
+  "license": "UNLICENSED"
+}
