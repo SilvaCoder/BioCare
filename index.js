@@ -53,10 +53,10 @@ servidor.get('/teste', function (req, res) {
 
 servidor.get('/email', function(req, res){
 
-    if(req.params.receiver){
+    if(req.query.receiver){
         var email = {
-            receiverName: req.params.receiver,
-            receiverEmail: req.params.receiver,
+            receiverName: req.query.receiver,
+            receiverEmail: req.query.receiver,
             htmlBody: '<h3> Olá, este é um email de teste!</h3>'+
                         '<p> Testando o serviço de email </p>'
         }
@@ -65,11 +65,11 @@ servidor.get('/email', function(req, res){
             if(sent){
                 res.send('Email enviado com sucesso!');
             }else{
-                res.send('Houve um erro no envio do email, verifique se você inseriu o email corretamente no parâmetro "receiver"');
+                res.send('Houve um erro no envio do email, verifique se você inseriu o email corretamente no parâmetro "receiver" na query desta url');
             }
         });
     }else{
-        res.send('Parâmetro "receiver" não enviado.');
+        res.send('Parâmetro "receiver" não enviado na query desta url. Ex: http://35.165.254.255/email?receiver=marco.up.bsi@gmail.com .');
     }
     
 });
@@ -286,5 +286,5 @@ var aviso = function (tipo, req, status) {
 };
 
 servidor.listen(80, function () {
-  console.log('BioCare WebServer listening on port 3000!');
+  console.log('BioCare WebServer listening on port 80!');
 });
